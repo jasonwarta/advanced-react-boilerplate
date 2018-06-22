@@ -1,0 +1,20 @@
+[Unit]
+Description=AdvancedReactBoilerplate_prod
+After=network.target
+
+[Service]
+Type=simple
+User=nodejs
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /home/ubuntu/AdvancedReactBoilerplate/prod/server.js prod
+Restart=on-failure
+
+LimitNOFILE=infinity
+LimitCORE=infinity
+
+StandardInput=null
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

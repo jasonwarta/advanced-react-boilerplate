@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "transform-es2015-classes", ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }],
+    ["babel-plugin-root-import", {
+      "rootPathSuffix": "src"
+    }]
+  ],
+  "presets": [
+    "env",
+    "airbnb",
+    "react",
+    "stage-0"
+  ]
+}
